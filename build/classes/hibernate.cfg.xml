@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="connection.characterEncoding">UTF-8</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    
+    <property name="hibernate.c3p0.idle_test_period">14400</property>
+    <property name="hibernate.c3p0.timeout">25200</property>
+    <property name="hibernate.c3p0.max_size">15</property>
+    <property name="hibernate.c3p0.min_size">3</property>
+    <property name="hibernate.c3p0.maxIdleTimeExcessConnections">20</property>
+    <property name="hibernate.c3p0.validate">false</property>
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    
+    <mapping class="call.center.model.LoginInformation"/>
+    <mapping class="call.center.model.UserInformation"/>
+    <mapping class="call.center.model.QuestionInformation"/>
+  </session-factory>
+</hibernate-configuration>
